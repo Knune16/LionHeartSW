@@ -5,7 +5,7 @@ const cors = require('cors');
 
 
 //create a database connection
-mongoose.connect('mongodb+srv://Knune:<EGJaqeUv0hMvGw8i>@ecommerce.xpter.mongodb.net/')
+mongoose.connect(process.env.MONGODB_URL)
     .then(() => console.log("MongoDB Connected"))
     .catch((error) => console.log(error));
 
